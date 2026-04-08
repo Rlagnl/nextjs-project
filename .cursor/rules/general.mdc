@@ -1,0 +1,24 @@
+---
+description: "General project AI rules "
+globs: "**/*.ts,**/*.tsx"
+alwaysApply: true
+---
+
+# 技术栈
+
+- 工具：ESLint + Prettier
+- 禁止：`any`、`// @ts-ignore`、直接操作 DOM
+
+# 代码风格
+
+- 组件：PascalCase（例如 `Button.tsx`）
+- 文件：kebab-case（例如 `user-profile.ts`）
+- 命名：新定义的 `interface` 命名必须以 `I` 开头，新定义的 `type` 命名必须以 `Type` 结尾
+- 缩进：2 空格，分号必须
+- 类型：显式返回类型，`Props` 必须使用 `interface`
+- `Props` 需要先解构再使用，例如：`const { children } = props;`
+
+# 路径引用规范
+
+- 所有文件引用必须使用绝对路径（例如 `@/scenes/GameScene`），禁止使用相对路径（例如 `./GameScene`）
+- 绝对路径基于 `tsconfig.ts` 中的 alias 配置：
