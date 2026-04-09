@@ -1,11 +1,8 @@
----
-description: "General project AI rules "
-globs: "**/*.ts,**/*.tsx"
-alwaysApply: true
----
+# 项目 AI 规则
 
-# 技术栈
+## 技术栈
 
+- nextjs + TypeScript + shadcn ui + tailwind css
 - 工具：ESLint + Prettier
 - 禁止：`any`、`// @ts-ignore`、直接操作 DOM
 

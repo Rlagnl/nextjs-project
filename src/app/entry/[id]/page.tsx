@@ -1,5 +1,5 @@
-import { getListData } from "@services/index";
-import { parseISO, format } from "date-fns";
+import { EntryHeader } from "@/entry/[id]/_components/header";
+import { DataCard } from "@/entry/[id]/_components/card/data-card";
 
 export default async function Page({
   params,
@@ -10,21 +10,14 @@ export default async function Page({
 }) {
   const { id } = await params;
   const { filters } = await searchParams;
-
-  const data = await getListData(20);
+  const limit = 20;
 
   return (
-    <div>
-      <div>
-        {id} - {filters}
+    <main className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6">
+      <div className="flex flex-col gap-6">
+        <EntryHeader id={id} />
+        <DataCard limit={limit} />
       </div>
-      <div>
-        {data.map(({ id, created_at }) => (
-          <div key={id}>
-            {id} - {format(parseISO(created_at), "LLLL d, yyyy")}
-          </div>
-        ))}
-      </div>
-    </div>
+    </main>
   );
 }

@@ -9,3 +9,4 @@ export async function getListData(limit = 20): Promise<IDataRow[]> {
   const res = await fetchData<IDataRow>(`/api/data?limit=${limit}`);
   return res.ok ? res.data : [];
 }
+
