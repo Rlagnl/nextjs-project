@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.includeLanguages": {
+    "scss": "css"
+  },
+  "css.customData": [
+    ".vscode/tailwind.custom-data.json"
+  ]
+}

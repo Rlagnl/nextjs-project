@@ -1,0 +1,16 @@
+{
+  "name": "create-scene",
+  "version": "1.0.0",
+  "description": "Skill for creating new scene files in Phaser 3 project",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phaser3",
+    "scene",
+    "create"
+  ],
+  "author": "",
+  "license": "MIT"
+}
